@@ -67,6 +67,7 @@ flowFile = session.write(flowFile, { inputStream, outputStream ->
   
     inJson.remove("partners");
     inJson.remove("organizations");
+    inJson.remove("headerRef");
    
     // Converting back to JSON
   	def builder = new JsonBuilder(inJson)  	
