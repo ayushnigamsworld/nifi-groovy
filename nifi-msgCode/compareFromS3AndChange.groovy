@@ -47,4 +47,5 @@ flowFile = session.write(flowFile, { inputStream, outputStream ->
     outputStream.write(builder.toPrettyString().getBytes(StandardCharsets.UTF_8))
 } as StreamCallback)
 
+flowFile = session.putAttribute(flowFile, 'filterForHttp', 'true')
 session.transfer(flowFile, REL_SUCCESS)
