@@ -49,7 +49,7 @@ flowFile = session.write(flowFile, { inputStream, outputStream ->
        	referenceT = true;
         referenceNo = headerRef.referenceNumber;
         break;
-      }  
+      }
     }
   
     // headerReference ZP29  
